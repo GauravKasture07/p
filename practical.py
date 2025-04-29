@@ -271,3 +271,56 @@
 
 # if __name__ == "__main__":
 #     chatbot()
+
+
+# public class g1 {
+#     public static void sendMail(String address, String subject, String body) {
+#         Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+#         String[] toAddresses = new String[] { address };
+#         mail.setToAddresses(toAddresses);
+#         mail.setSubject(subject);
+#         mail.setPlainTextBody(body);
+#         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+# }
+# }
+# //String address='kasturegaurav07@gmail.com';
+# //String subject='hello';
+# //String body='thanks';
+# //g1.sendMail(address,subject,body);
+
+# sudo apt update
+# sudo apt install -y docker.io
+# sudo systemctl enable --now docker
+# sudo docker run -d \
+# --name nextcloud-mariadb \
+# -e MYSQL_ROOT_PASSWORD=rootpassword \
+# -e MYSQL_DATABASE=nextcloud \
+# -e MYSQL_USER=nextclouduser \
+# -e MYSQL_PASSWORD=nextcloudpass \
+# -v nextcloud-mariadb-data:/var/lib/mysql \
+# --restart unless-stopped \
+# mariadb:10.6
+
+# sudo docker run -d \
+# --name nextcloud \
+# -p 8080:80 \
+# -e MYSQL_DATABASE=nextcloud \
+# -e MYSQL_USER=nextclouduser \
+# -e MYSQL_PASSWORD=nextcloudpass \
+# -e MYSQL_HOST=nextcloud-mariadb \
+# -v nextcloud-data:/var/www/html \
+# --restart unless-stopped \
+# --link nextcloud-mariadb \
+# nextcloud
+
+# Ifconfig
+
+# http://your-server-ip:8080
+
+# Database name: nextcloud
+# Username: nextclouduser
+# Password: nextcloudpass
+# Database host: nextcloud-mariadb
+
+
+
